@@ -1,1 +1,51 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.title {
+   font-family: Orbitron;
+   letter-spacing: 5px;
+}
+
+.santafe {
+   font-family: Special Elite;
+}
+
+.sferenet {
+   font-family: Orbitron;
+}
+
+.djsmash {
+   font-family: Bebas Neue;
+}
+
+.musica {
+   font-family: Montserrat;
+}
+
+.heartbeat {
+   animation: heartbeat 1.4s infinite;
+   display: inline-block;
+   transform-origin: center;
+}
+
+@keyframes heartbeat {
+   0%, 100% {
+      transform: scale(1);
+   }
+   10%, 30% {
+      transform: scale(1.002);
+   }
+   20%, 40% {
+      transform: scale(0.95);
+   }
+   50% {
+      transform: scale(1.002);
+   }
+   60%, 80% {
+      transform: scale(1);
+   }
+}
