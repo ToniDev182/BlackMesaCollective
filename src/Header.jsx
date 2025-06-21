@@ -30,13 +30,13 @@ function Header() {
 
       {/* Contenido del header */}
       <div className="relative z-20 w-full h-full flex flex-col justify-center items-center gap-20 px-6">
-        <h1 className="title font-bold text-5xl md:text-7xl lg:text-8xl">BLACK MESA</h1>
+        <h1 className="title font-bold text-5xl md:text-7xl lg:text-8xl flex text-center">BLACK MESA</h1>
 
         <div className="subcontent flex flex-col gap-5">
           <div className="nombres flex flex-row justify-center items-center gap-9 text-2xl md:text-4xl lg:text-6xl">
-            <h2 className="santafe">SANTA FE</h2>
-            <h2 className="sferenet pb-2 md:pb-3 lg:pb-5">SFERENET</h2>
-            <h2 className="djsmash pb-1 md:pb-2 ">ROME DJMASH</h2>
+            <h2 className="santafe flex text-center">SANTA FE</h2>
+            <h2 className="sferenet pb-2 md:pb-3 lg:pb-5 flex text-center">SFERENET</h2>
+            <h2 className="djsmash pb-1 md:pb-2 flex text-center">ROME DJMASH</h2>
           </div>
           {/* seccion de musica */}
           <div className="musica flex flex-col md:flex-row gap-2 text-xl items-center md:justify-center md:text-2xl lg:text-3xl">
