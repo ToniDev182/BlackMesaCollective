@@ -1,4 +1,5 @@
 import clip from "../src/assets/fog1.mp4";
+import './styles/Header.css'
 
 function Header() {
   const genres = ["TECHNO", "BASS HOUSE", "BREAKS", "DRUM AND BASS"];
