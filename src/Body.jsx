@@ -1,4 +1,4 @@
-import Carrousel from './Carrousel';
+import Cards from './Cards';
 import Eventos from './Eventos'
 import './styles/body.css'
 
@@ -6,7 +6,7 @@ function Body() {
   return (
     <>
     <div className='body-container'>
-    <Carrousel/>
+    <Cards/>
     <Eventos/>
     </div>
     </>

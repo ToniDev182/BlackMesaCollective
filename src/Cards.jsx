@@ -7,7 +7,7 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import { FaInstagram, FaSoundcloud } from "react-icons/fa";
 import "./styles/card-dj.css";
 
-export default function Carrousel() {
+function Cards() {
   const cards = [
     {
       img: "https://i.postimg.cc/htrydMrr/SantaFe1.jpg",
@@ -27,12 +27,12 @@ export default function Carrousel() {
       soundcloud: "https://soundcloud.com/zenidd",
     },
     {
-      img: "https://i.postimg.cc/4yP75KFr/DjSmash.png",
+      img: "https://i.postimg.cc/KvBJXT9t/romedjmash.jpg",
       text: "ROME DJMASH",
       subtext:
         "Desde Málaga, Rome DJMash mezcla géneros con naturalidad. DnB, Dubstep, House y más: un flujo constante de energía, técnica y sorpresa.",
       instagram: "https://www.instagram.com/romedjmash/",
-      soundcloud: "https://soundcloud.com",
+      soundcloud: "https://on.soundcloud.com/uDKv3IFHkZiIfLZMTh",
     },
   ];
 
@@ -111,3 +111,5 @@ export default function Carrousel() {
     </div>
   );
 }
+
+export default Cards;
