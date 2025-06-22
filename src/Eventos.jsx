@@ -1,23 +1,69 @@
-function Eventos() {
+import { useState } from "react";
+
+const eventos = [
+  {
+    src: "https://i.postimg.cc/Y9DwvzSs/Poster1.png",
+    alt: "poster 1",
+    texto: "SALA INFERNO (JAEN) -",
+    subtext: " 22/02/2025"
+  },
+  {
+    src: "https://i.postimg.cc/NMSMSHHZ/poster2.jpg",
+    alt: "poster 2",
+    texto: "SALA INFERNO (JAEN) -",
+    subtext: " 7/06/2025"
+  },
+  {
+    src: "https://i.postimg.cc/tJ8XvQLb/proximo.png",
+    alt: "proximamente",
+    texto: "PROXIMAMENTE...",
+  },
+];
+
+export default function Eventos() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleActive = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
-    <section className="flex justify-center w-auto h-[450px] md:h-[800px] max-w-[800px] mx-auto pb-10">
-      <img
-        src="https://i.postimg.cc/rwRMZ0mB/Poster1.png"
-        alt=""
-        className="w-0 flex-grow object-cover opacity-90 transition-all duration-500 ease-in-out hover:w-[300px] md:hover:w-[500px] hover:opacity-100 hover:cursor-crosshair hover:filter hover:contrast-[200%]"
-      />
-      <img
-        src="https://i.postimg.cc/g2g8s7xS/Whats-App-Image-2025-06-21-at-12-17-12.jpg"
-        alt=""
-        className="w-0 flex-grow object-cover opacity-90 transition-all duration-500 ease-in-out hover:w-[300px] md:hover:w-[500px] hover:opacity-100 hover:cursor-crosshair hover:filter hover:contrast-[200%]"
-      />
-      <img
-        src="https://i.postimg.cc/gkNv8snz/proximo.png"
-        alt=""
-        className="w-0 flex-grow object-cover opacity-90 transition-all duration-500 ease-in-out hover:w-[300px] md:hover:w-[500px] hover:opacity-100 hover:cursor-crosshair hover:filter hover:contrast-[200%]"
-      />
-    </section>
+    <div className="max-w-screen mx-auto px-4 bg-black/60 pb-20">
+      <h2 className="text-2xl font-bold mb-6 text-center uppercase text-red-700">Eventos</h2>
+      <div className="flex flex-wrap justify-center gap-10 md:gap-20">
+        {eventos.map((evento, index) => (
+          <div
+            key={index}
+            className="relative w-full max-w-[1080px] sm:max-w-[400px] cursor-pointer overflow-hidden rounded-lg"
+            onClick={() => toggleActive(index)}
+          >
+            <img
+              src={evento.src}
+              alt={evento.alt}
+              className={`w-full h-auto transition-transform duration-300 ease-in-out
+                ${
+                  activeIndex === index
+                    ? "scale-110"
+                    : "hover:scale-110"
+                }
+              `}
+            />
+            <div
+              className={`absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black bg-opacity-50
+                transition-opacity duration-300 ease-in-out
+                ${
+                  activeIndex === index
+                    ? "opacity-100"
+                    : "opacity-0 hover:opacity-100"
+                }
+              `}
+            >
+              {evento.texto}
+              {evento.subtext}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
-
-export default Eventos;
