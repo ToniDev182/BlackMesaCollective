@@ -37,7 +37,7 @@ function Cards() {
   ];
 
   return (
-    <div className="h-auto py-20 flex items-center justify-center bg-black text-white">
+    <div className="h-auto py-20 flex items-center justify-center bg-black/60 text-white">
       <Swiper
         effect="coverflow"
         grabCursor={true}
@@ -97,7 +97,6 @@ function Cards() {
         <div className="swiper-pagination mt-4 !text-white"></div>
       </Swiper>
 
-      {/* Estilo global para los bullets rojos */}
       <style jsx global>{`
         .swiper-pagination-bullet {
           background: #ff0000 !important;
