@@ -10,6 +10,15 @@ html, body, #root {
    letter-spacing: 5px;
 }
 
+.title-dj {
+   font-family: Orbitron;
+}
+
+.text-dj {
+   font-family: Bebas Neue;
+   letter-spacing: 1.2px;
+}
+
 .santafe {
    font-family: Special Elite;
 }
