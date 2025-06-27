@@ -2,6 +2,7 @@ import Cards from "./Cards";
 import Eventos from "./Eventos";
 import fire from "./assets/fire.mp4";
 import "./styles/body.css";
+import Galeria from "./Galeria";
 
 function Body() {
   return (
@@ -22,6 +23,7 @@ function Body() {
         <div className="relative z-10">
           <Cards />
           <Eventos />
+          <Galeria />
         </div>
       </div>
     </div>

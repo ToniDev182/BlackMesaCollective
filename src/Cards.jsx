@@ -96,17 +96,6 @@ function Cards() {
 
         <div className="swiper-pagination mt-4 !text-white"></div>
       </Swiper>
-
-      <style jsx global>{`
-        .swiper-pagination-bullet {
-          background: #ff0000 !important;
-          opacity: 0.7;
-        }
-        .swiper-pagination-bullet-active {
-          background: #ff0000 !important;
-          opacity: 1;
-        }
-      `}</style>
     </div>
   );
 }
