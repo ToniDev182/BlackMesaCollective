@@ -1,8 +1,15 @@
+import React from "react";
 import clip from "../src/assets/fog1.mp4";
 import './styles/header.css'
+import { useLanguage } from "./context/LanguageContext";
 
 function Header() {
   const genres = ["TECHNO", "BASS HOUSE", "BREAKS", "DRUM AND BASS"];
+  const { t, language, setLanguage } = useLanguage();
+
+  const toggleLanguage = () => {
+    setLanguage(language === "es" ? "en" : "es");
+  };
 
   return (
     <header className="relative text-white h-screen overflow-hidden bg-black">
@@ -22,6 +29,14 @@ function Header() {
       {/* Capa de color roja con mezcla */}
       <div className="absolute top-0 left-0 w-full h-full bg-red-600 mix-blend-multiply opacity-100 z-10" />
 
+      {/* Botón de cambio de idioma */}
+<button
+  onClick={toggleLanguage}
+  className="lang-button fixed top-6 left-6 z-30 bg-black text-white px-3 py-1 rounded border-1 border-red-600"
+  aria-label="Toggle Language"
+>
+  {language === "es" ? "EN" : "ES"}
+</button>
 
       <img
         src="https://i.postimg.cc/nLDVrdQS/Black-Mesa-Logo.png"

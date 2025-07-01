@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
+import { useLanguage } from "./context/LanguageContext";  // Importa el hook
 
 const images = [
   "https://i.postimg.cc/BZkPbHJm/BM14.png",
@@ -21,10 +22,12 @@ const images = [
 ];
 
 function AutoCarousel() {
+  const { t } = useLanguage(); // Hook para traducción
+
   return (
     <section className="w-full max-w-6xl mx-auto pb-12 px-6 text-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6 text-center uppercase text-red-700">
-        Galería
+        {t("gallery.title")} {/* Aquí la traducción */}
       </h2>
       <Swiper
         spaceBetween={30}
