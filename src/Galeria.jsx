@@ -22,7 +22,7 @@ const images = [
 
 function AutoCarousel() {
   return (
-    <section className="w-full max-w-6xl mx-auto pb-12 px-6 bg-black text-white rounded-lg shadow-lg">
+    <section className="w-full max-w-6xl mx-auto pb-12 px-6 text-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6 text-center uppercase text-red-700">
         Galería
       </h2>

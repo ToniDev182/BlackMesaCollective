@@ -3,6 +3,7 @@ import Eventos from "./Eventos";
 import fire from "./assets/fire.mp4";
 import "./styles/body.css";
 import Galeria from "./Galeria";
+import Media from "./Media";
 
 function Body() {
   return (
@@ -24,6 +25,7 @@ function Body() {
           <Cards />
           <Eventos />
           <Galeria />
+          <Media />
         </div>
       </div>
     </div>
