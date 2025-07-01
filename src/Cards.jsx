@@ -6,31 +6,30 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { FaInstagram, FaSoundcloud } from "react-icons/fa";
 import "./styles/card-dj.css";
+import { useLanguage } from "./context/LanguageContext";
 
 function Cards() {
+  const { t } = useLanguage();
+
   const cards = [
     {
       img: "https://i.postimg.cc/htrydMrr/SantaFe1.jpg",
       text: "SANTA FE",
-      subtext:
-        "Desde Alcalá la Real, Santa Fe dispara sets de Drum and Bass y break techno con una intensidad cruda. Sonidos duros, sin filtros, directos al cuerpo.",
+      key: "santaFe",
       instagram: "https://www.instagram.com/alvaro.xposito/",
-      soundcloud:
-        "https://soundcloud.com/iridium_992?p=a&c=1&si=9b6059e534014896b32e3f4fe519f3b8&utm_source=other&utm_medium=text&utm_campaign=social_sharing",
+      soundcloud: "https://soundcloud.com/iridium_992",
     },
     {
       img: "https://i.postimg.cc/Z5CB85PM/sfernet.png",
       text: "SFERENET",
-      subtext:
-        "Granada es su base, pero su sonido va más allá. Bass experimental y breaks se funden en sets mentales, densos y profundamente rítmicos.",
+      key: "sferenet",
       instagram: "https://www.instagram.com/sferenet/",
       soundcloud: "https://soundcloud.com/zenidd",
     },
     {
       img: "https://i.postimg.cc/KvBJXT9t/romedjmash.jpg",
       text: "ROME DJMASH",
-      subtext:
-        "Desde Málaga, Rome DJMash mezcla géneros con naturalidad. DnB, Dubstep, House y más: un flujo constante de energía, técnica y sorpresa.",
+      key: "rome",
       instagram: "https://www.instagram.com/romedjmash/",
       soundcloud: "https://on.soundcloud.com/uDKv3IFHkZiIfLZMTh",
     },
@@ -40,8 +39,8 @@ function Cards() {
     <div className="h-auto py-20 flex items-center justify-center bg-black/60 text-white">
       <Swiper
         effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
+        grabCursor
+        centeredSlides
         slidesPerView="auto"
         initialSlide={1}
         coverflowEffect={{
@@ -71,21 +70,13 @@ function Cards() {
                   {card.text}
                 </p>
                 <p className="flex text-dj justify-center text-justify hidden md:flex md:text-xl md:py-2 lg:py-4">
-                  {card.subtext}
+                  {t(card.key)}
                 </p>
                 <div className="flex justify-between">
-                  <a
-                    href={card.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={card.instagram} target="_blank" rel="noopener noreferrer">
                     <FaInstagram className="text-red-500 text-xl md:text-4xl hover:scale-120 transition" />
                   </a>
-                  <a
-                    href={card.soundcloud}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={card.soundcloud} target="_blank" rel="noopener noreferrer">
                     <FaSoundcloud className="text-red-500 text-xl md:text-4xl hover:scale-120 transition" />
                   </a>
                 </div>
@@ -93,7 +84,6 @@ function Cards() {
             </div>
           </SwiperSlide>
         ))}
-
         <div className="swiper-pagination mt-4 !text-white"></div>
       </Swiper>
     </div>
